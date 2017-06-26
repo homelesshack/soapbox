@@ -34,8 +34,8 @@ $database_prefix = '';
  * $config_directories['staging'] = '/home/myusername/config/staging';
  * @endcode
  */
-$config_directories['active'] = 'files/config_' . md5($database) . '/active';
-$config_directories['staging'] = 'files/config_' . md5($database) . '/staging';
+$config_directories['active'] = '../config/active';
+$config_directories['staging'] = '../config/staging';
 
 /**
  * Access control for update.php script.
@@ -336,7 +336,7 @@ $settings['backdrop_drupal_compatibility'] = TRUE;
  *
  * To make local development easier, you can add a file that contains your local
  * database connection information. This local settings file can be ignored in
- * your Git repository so that any updates to settings.php can be pulled in 
+ * your Git repository so that any updates to settings.php can be pulled in
  * without overwriting your local changes.
  */
 if (file_exists(__DIR__ . '/settings.local.php')) {
