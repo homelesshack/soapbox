@@ -6,7 +6,7 @@
     "description": null,
     "module": "layout",
     "weight": 1,
-    "storage": 4,
+    "storage": 2,
     "layout_template": "boxton",
     "disabled": false,
     "settings": {
@@ -18,11 +18,13 @@
         "header": [
             "55f542fe-0763-453b-ba3e-62677ea559e5"
         ],
+        "top": [],
         "content": [
             "default"
         ],
+        "bottom": [],
         "footer": [],
-        "top": []
+        "title": []
     },
     "content": {
         "55f542fe-0763-453b-ba3e-62677ea559e5": {
@@ -34,7 +36,9 @@
                     "title_display": "default",
                     "title": "",
                     "style": "default",
-                    "block_settings": [],
+                    "block_settings": {
+                        "current": 0
+                    },
                     "contexts": []
                 },
                 "uuid": "55f542fe-0763-453b-ba3e-62677ea559e5",
@@ -45,7 +49,20 @@
                             "classes": ""
                         }
                     }
-                }
+                },
+                "conditions": [
+                    {
+                        "plugin": "user_role",
+                        "data": {
+                            "settings": {
+                                "roles": [
+                                    "administrator"
+                                ],
+                                "load_condition_nojs": "Load condition"
+                            }
+                        }
+                    }
+                ]
             }
         },
         "default": {
