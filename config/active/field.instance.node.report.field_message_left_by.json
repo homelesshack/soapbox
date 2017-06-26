@@ -1,0 +1,35 @@
+{
+    "_config_name": "field.instance.node.report.field_message_left_by",
+    "field_name": "field_message_left_by",
+    "entity_type": "node",
+    "bundle": "report",
+    "label": "Message left by",
+    "widget": {
+        "weight": "3",
+        "type": "options_buttons",
+        "module": "options",
+        "active": 1,
+        "settings": []
+    },
+    "description": "",
+    "required": 1,
+    "deleted": 0,
+    "default_value": [
+        {
+            "value": "working_with"
+        }
+    ],
+    "default_value_function": null,
+    "settings": {
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "above",
+            "type": "list_default",
+            "weight": "3",
+            "settings": [],
+            "module": "list"
+        }
+    }
+}
