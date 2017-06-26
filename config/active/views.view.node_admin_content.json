@@ -3,7 +3,7 @@
     "name": "node_admin_content",
     "description": "Administrative listing for managing content.",
     "module": "node",
-    "storage": 4,
+    "storage": 2,
     "tag": "default",
     "disabled": false,
     "base_table": "node",
@@ -67,30 +67,6 @@
                 "style_plugin": "table",
                 "row_plugin": "fields",
                 "fields": {
-                    "bulk_form": {
-                        "id": "bulk_form",
-                        "table": "node",
-                        "field": "bulk_form",
-                        "relationship": "none",
-                        "group_type": "group",
-                        "ui_name": "",
-                        "label": "",
-                        "exclude": 0,
-                        "element_type": "",
-                        "element_class": "",
-                        "element_label_type": "",
-                        "element_label_class": "",
-                        "element_label_colon": false,
-                        "element_wrapper_type": "",
-                        "element_wrapper_class": "",
-                        "element_default_classes": 0,
-                        "empty": "",
-                        "hide_empty": 0,
-                        "empty_zero": 0,
-                        "hide_alter_empty": 1,
-                        "include_exclude": "exclude",
-                        "selected_actions": []
-                    },
                     "title": {
                         "id": "title",
                         "table": "node",
@@ -99,29 +75,68 @@
                         "empty_zero": 0,
                         "link_to_node": 1
                     },
-                    "type": {
-                        "id": "type",
-                        "table": "node",
-                        "field": "type",
+                    "field_local_authority": {
+                        "id": "field_local_authority",
+                        "table": "field_data_field_local_authority",
+                        "field": "field_local_authority",
                         "relationship": "none",
                         "group_type": "group",
                         "ui_name": "",
-                        "label": "Content type",
+                        "label": "Local authority",
                         "exclude": 0,
+                        "alter": {
+                            "alter_text": 0,
+                            "text": "",
+                            "make_link": 0,
+                            "path": "",
+                            "absolute": 0,
+                            "external": 0,
+                            "replace_spaces": 0,
+                            "path_case": "none",
+                            "trim_whitespace": 0,
+                            "alt": "",
+                            "rel": "",
+                            "link_class": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "target": "",
+                            "nl2br": 0,
+                            "max_length": "",
+                            "word_boundary": 1,
+                            "ellipsis": 1,
+                            "more_link": 0,
+                            "more_link_text": "",
+                            "more_link_path": "",
+                            "strip_tags": 0,
+                            "trim": 0,
+                            "preserve_tags": "",
+                            "html": 0
+                        },
                         "element_type": "",
                         "element_class": "",
                         "element_label_type": "",
-                        "element_label_class": "priority-medium",
-                        "element_label_colon": 0,
+                        "element_label_class": "",
+                        "element_label_colon": 1,
                         "element_wrapper_type": "",
                         "element_wrapper_class": "",
-                        "element_default_classes": 0,
+                        "element_default_classes": 1,
                         "empty": "",
                         "hide_empty": 0,
                         "empty_zero": 0,
                         "hide_alter_empty": 1,
-                        "link_to_node": 0,
-                        "machine_name": 0
+                        "click_sort_column": "value",
+                        "type": "list_default",
+                        "settings": [],
+                        "group_column": "value",
+                        "group_columns": [],
+                        "group_rows": true,
+                        "delta_limit": "all",
+                        "delta_offset": 0,
+                        "delta_reversed": false,
+                        "delta_first_last": false,
+                        "multi_type": "separator",
+                        "separator": ", ",
+                        "field_api_classes": 0
                     },
                     "name": {
                         "id": "name",
@@ -130,8 +145,36 @@
                         "relationship": "uid",
                         "group_type": "group",
                         "ui_name": "",
-                        "label": "Name",
+                        "label": "Account",
                         "exclude": 0,
+                        "alter": {
+                            "alter_text": 0,
+                            "text": "",
+                            "make_link": 0,
+                            "path": "",
+                            "absolute": 0,
+                            "external": 0,
+                            "replace_spaces": 0,
+                            "path_case": "none",
+                            "trim_whitespace": 0,
+                            "alt": "",
+                            "rel": "",
+                            "link_class": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "target": "",
+                            "nl2br": 0,
+                            "max_length": "",
+                            "word_boundary": 1,
+                            "ellipsis": 1,
+                            "more_link": 0,
+                            "more_link_text": "",
+                            "more_link_path": "",
+                            "strip_tags": 0,
+                            "trim": 0,
+                            "preserve_tags": "",
+                            "html": 0
+                        },
                         "element_type": "",
                         "element_class": "",
                         "element_label_type": "",
@@ -148,32 +191,6 @@
                         "overwrite_anonymous": 0,
                         "anonymous_text": "",
                         "format_username": 1
-                    },
-                    "status": {
-                        "id": "status",
-                        "table": "node",
-                        "field": "status",
-                        "relationship": "none",
-                        "group_type": "group",
-                        "ui_name": "",
-                        "label": "Status",
-                        "exclude": 0,
-                        "element_type": "",
-                        "element_class": "",
-                        "element_label_type": "",
-                        "element_label_class": "",
-                        "element_label_colon": 0,
-                        "element_wrapper_type": "",
-                        "element_wrapper_class": "",
-                        "element_default_classes": 0,
-                        "empty": "",
-                        "hide_empty": 0,
-                        "empty_zero": 0,
-                        "hide_alter_empty": 1,
-                        "type": "published-notpublished",
-                        "type_custom_true": "",
-                        "type_custom_false": "",
-                        "not": 0
                     },
                     "changed": {
                         "id": "changed",
@@ -275,65 +292,6 @@
                     }
                 },
                 "filters": {
-                    "status": {
-                        "id": "status",
-                        "table": "node",
-                        "field": "status",
-                        "relationship": "none",
-                        "group_type": "group",
-                        "ui_name": "",
-                        "operator": "=",
-                        "value": "All",
-                        "group": 1,
-                        "exposed": true,
-                        "expose": {
-                            "operator_id": "",
-                            "label": "Published",
-                            "description": "",
-                            "use_operator": false,
-                            "operator": "status_op",
-                            "identifier": "status",
-                            "required": 0,
-                            "remember": 0,
-                            "multiple": false,
-                            "remember_roles": {
-                                "anonymous": 0,
-                                "authenticated": 0,
-                                "administrator": 0
-                            }
-                        },
-                        "is_grouped": false
-                    },
-                    "type": {
-                        "id": "type",
-                        "table": "node",
-                        "field": "type",
-                        "relationship": "none",
-                        "group_type": "group",
-                        "ui_name": "",
-                        "operator": "in",
-                        "value": [],
-                        "group": "1",
-                        "exposed": true,
-                        "expose": {
-                            "operator_id": "type_op",
-                            "label": "Type",
-                            "description": "",
-                            "use_operator": 0,
-                            "operator": "type_op",
-                            "identifier": "type",
-                            "required": 0,
-                            "remember": 0,
-                            "multiple": 0,
-                            "remember_roles": {
-                                "anonymous": 0,
-                                "authenticated": 0,
-                                "administrator": 0
-                            },
-                            "reduce": 0
-                        },
-                        "is_grouped": false
-                    },
                     "title": {
                         "id": "title",
                         "table": "node",
@@ -343,7 +301,7 @@
                         "ui_name": "",
                         "operator": "word",
                         "value": "",
-                        "group": "1",
+                        "group": 1,
                         "exposed": true,
                         "expose": {
                             "operator_id": "title_op",
@@ -372,9 +330,97 @@
                         "ui_name": "",
                         "operator": "=",
                         "value": "",
-                        "group": "1",
+                        "group": 1,
                         "exposed": false,
                         "is_grouped": false
+                    },
+                    "field_local_authority_value": {
+                        "id": "field_local_authority_value",
+                        "table": "field_data_field_local_authority",
+                        "field": "field_local_authority_value",
+                        "relationship": "none",
+                        "group_type": "group",
+                        "ui_name": "",
+                        "operator": "or",
+                        "value": [],
+                        "group": "1",
+                        "exposed": true,
+                        "expose": {
+                            "operator_id": "field_local_authority_value_op",
+                            "label": "Local authority",
+                            "description": "",
+                            "use_operator": 0,
+                            "operator": "field_local_authority_value_op",
+                            "identifier": "field_local_authority_value",
+                            "required": 0,
+                            "remember": 0,
+                            "multiple": 0,
+                            "remember_roles": {
+                                "authenticated": "authenticated",
+                                "anonymous": 0,
+                                "administrator": 0,
+                                "reviewer": 0
+                            },
+                            "reduce": 0
+                        },
+                        "is_grouped": false,
+                        "group_info": {
+                            "label": "",
+                            "description": "",
+                            "identifier": "",
+                            "optional": true,
+                            "widget": "select",
+                            "multiple": false,
+                            "remember": 0,
+                            "default_group": "All",
+                            "default_group_multiple": [],
+                            "group_items": []
+                        },
+                        "reduce_duplicates": 0
+                    },
+                    "field_would_you_like_to_share_th_value": {
+                        "id": "field_would_you_like_to_share_th_value",
+                        "table": "field_data_field_would_you_like_to_share_th",
+                        "field": "field_would_you_like_to_share_th_value",
+                        "relationship": "none",
+                        "group_type": "group",
+                        "ui_name": "",
+                        "operator": "or",
+                        "value": [],
+                        "group": "1",
+                        "exposed": true,
+                        "expose": {
+                            "operator_id": "field_would_you_like_to_share_th_value_op",
+                            "label": "Sharing option",
+                            "description": "",
+                            "use_operator": 0,
+                            "operator": "field_would_you_like_to_share_th_value_op",
+                            "identifier": "field_would_you_like_to_share_th_value",
+                            "required": 0,
+                            "remember": 0,
+                            "multiple": 0,
+                            "remember_roles": {
+                                "authenticated": "authenticated",
+                                "anonymous": 0,
+                                "administrator": 0,
+                                "reviewer": 0
+                            },
+                            "reduce": 0
+                        },
+                        "is_grouped": false,
+                        "group_info": {
+                            "label": "",
+                            "description": "",
+                            "identifier": "",
+                            "optional": true,
+                            "widget": "select",
+                            "multiple": false,
+                            "remember": 0,
+                            "default_group": "All",
+                            "default_group_multiple": [],
+                            "group_items": []
+                        },
+                        "reduce_duplicates": 0
                     }
                 },
                 "sorts": {
@@ -385,7 +431,7 @@
                         "order": "DESC"
                     }
                 },
-                "title": "Content",
+                "title": "Reports",
                 "relationships": {
                     "uid": {
                         "id": "uid",
@@ -425,9 +471,8 @@
                     "columns": {
                         "bulk_form": "bulk_form",
                         "title": "title",
-                        "type": "type",
+                        "field_local_authority": "field_local_authority",
                         "name": "name",
-                        "status": "status",
                         "changed": "changed",
                         "edit_node": "edit_node",
                         "delete_node": "delete_node",
@@ -446,7 +491,7 @@
                             "separator": "",
                             "empty_column": 0
                         },
-                        "type": {
+                        "field_local_authority": {
                             "sortable": 1,
                             "default_sort_order": "asc",
                             "align": "",
@@ -454,13 +499,6 @@
                             "empty_column": 0
                         },
                         "name": {
-                            "sortable": 1,
-                            "default_sort_order": "asc",
-                            "align": "",
-                            "separator": "",
-                            "empty_column": 0
-                        },
-                        "status": {
                             "sortable": 1,
                             "default_sort_order": "asc",
                             "align": "",
@@ -492,6 +530,12 @@
                     },
                     "default": "changed",
                     "empty_table": 1
+                },
+                "filter_groups": {
+                    "operator": "AND",
+                    "groups": {
+                        "1": "AND"
+                    }
                 }
             }
         },

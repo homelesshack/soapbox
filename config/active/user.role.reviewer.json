@@ -1,0 +1,19 @@
+{
+    "_config_name": "user.role.reviewer",
+    "name": "reviewer",
+    "label": "Reviewer",
+    "weight": 3,
+    "permissions": [
+        "view any unpublished content",
+        "view revisions",
+        "revert revisions",
+        "delete revisions",
+        "edit own report content",
+        "edit any report content",
+        "delete own report content",
+        "delete any report content",
+        "access administration bar",
+        "access administration pages",
+        "access content overview"
+    ]
+}
